@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!--  Gregory James Potter
+      Introduction to Programming
+      Alan Labouseur
+      Project 2 game v0.2   -->
+
+
+<html>
+  <head>
+    <title> Indiana Jones Text Adventure </title
+      <meta http-equiv="Content-Type" 
+   content="text/html;charset=utf-8" />
+      <script type="text/javascript">
+        
+        var currLoc = 0;
+        function dispmsg(msg) { 
+        var target = document.getElementById("txtAnswer");
+        target.value = (msg);
+        }
+        
+        
+        function btnNorth_click() {
+        if (currLoc === 0) { 
+        currLoc = 1; 
+        dispmsg("north room");   
+        } else { 
+          if (currLoc === 3) { 
+          currLoc=0; 
+          dispmsg("start room");
+           } else { 
+            dispmsg("You cannot go north");
+             }
+        
+    }
+  }
+    
+      
+      
+      </script>
+  </head>
+<body>
+  <p style="font-size: 30px; color:Red"> <strong> Adventures of Indiana Jones </strong> </p>  
+    
+     
+    
+    <textarea rows="10" cols="50" id="txtAnswer"> You are standing in a dark cave and you see many torches dimly lit. You hear slithering, you do not like  this </textarea>
+   
+    
+    <p>
+    <input type="button"
+           value="North"
+           onclick="btnNorth_click();" />
+          
+    <input type="button"
+           value="East"
+           onclick="btnEast_click();" />
+          
+    <input type="button"
+           value="South"
+           onclick="btnSouth_click();" />
+        
+    <input type="button"
+           value="West"
+           onclick="btnWestclick();" />
+    </p>
+    <p> 
+      Una Problema? Click <a href="mailto:gregory.potter2@marist.edu"> Here </a> 
+    <p>
+    <p>
+      Needa to a Validate? Click <a href="http://validator.w3.org/#validate_by_input"> Here </a> 
+    </p>
+</body>
+</html>
